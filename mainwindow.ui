@@ -6,20 +6,174 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1112</width>
-    <height>609</height>
+    <width>1378</width>
+    <height>795</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMenuBar {
+	background-color: rgb(208, 255, 255);
+    background-color:#DAF7A6 ;
+    color: #000000;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-size: 14px ;
+    padding: 0px 9px;
+    border: none;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 6px 12px;
+    margin: 0px 4px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #3c3f41;
+    color: #ffffff;
+}
+
+QMenuBar::item:pressed {
+    background-color: #505050;
+}
+
+QMenu {
+    background-color: #3a3a3a;
+    border: 1px solid #555555;
+    color: #ffffff;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+QMenu::item {
+    background-color: transparent;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+QMenu::item:selected {
+    background-color: #5a5a5a;
+}
+
+QMenu::item:disabled {
+    color: #888888;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #555;
+    margin: 4px 0;
+}
+/* Toolbar Base */
+QToolBar {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #fdfdfd,
+        stop: 1 #eaeaea
+    );
+    border: none;               /* Adds space inside toolbar */
+    spacing: 8px;               /* Space between buttons */
+    height: 40px;               /* Control overall height */
+	width:4px;
+}
+
+/* Tool Buttons (Modern size + look) */
+QToolButton {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 4px;          /* Controls clickable area */
+    margin: 2px;
+    color: #333;
+    min-width: 32px;
+    min-height: 32px;
+    icon-size: 24px 24px;       /* Set modern icon size */
+}
+
+/* Hover Effect */
+QToolButton:hover {
+    background-color: #e3edf9;
+    border: 1px solid #a6c0e0;
+}
+
+/* Pressed Effect */
+QToolButton:pressed {
+    background-color: #c5d8f2;
+    border: 1px solid #7ea4d6;
+}
+
+/* Checked (Toggleable) Buttons */
+QToolButton:checked {
+    background-color: #d0e0f5;
+    border: 1px solid #649fd1;
+}
+
+/* Toolbar Separator (subtle and clean) */
+QToolBar::separator {
+    background-color: #cccccc;
+    width: 1px;
+    margin: 6px;
+}
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">border:none;
+background-color: rgb(255, 255, 255);</string>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_6">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
     <item>
      <widget class="QWidget" name="widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">border: none;
+color: rgb(0, 0, 0);
+
+ padding: 0px;
+    margin: 0px;
+
+</string>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QWidget" name="widget_2" native="true">
            <property name="maximumSize">
@@ -29,7 +183,8 @@
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border: 1px solid green</string>
+            <string notr="true">border: 2px solid black;
+</string>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
@@ -39,6 +194,12 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>170</width>
+                <height>17</height>
+               </size>
               </property>
               <property name="maximumSize">
                <size>
@@ -72,20 +233,13 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
+              <property name="minimumSize">
                <size>
-                <width>207</width>
-                <height>15</height>
+                <width>170</width>
+                <height>17</height>
                </size>
               </property>
-             </spacer>
+             </widget>
             </item>
             <item>
              <widget class="QPushButton" name="pushButton">
@@ -93,19 +247,6 @@
                <string>PushButton</string>
               </property>
              </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>206</width>
-                <height>15</height>
-               </size>
-              </property>
-             </spacer>
             </item>
             <item>
              <widget class="QPushButton" name="pushButton_2">
@@ -139,58 +280,160 @@
          </item>
          <item>
           <widget class="QSplitter" name="splitter_2">
+           <property name="styleSheet">
+            <string notr="true">border:none;</string>
+           </property>
            <property name="orientation">
             <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <widget class="QWidget" name="widget_3" native="true">
             <property name="styleSheet">
-             <string notr="true">border: 1px solid green</string>
+             <string notr="true">border: 2px solid black;
+ padding: 0px;
+    margin: 0px;</string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_2">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
-              <widget class="QWidget" name="widget_4" native="true">
-               <layout class="QHBoxLayout" name="horizontalLayout_2">
-                <item>
-                 <widget class="QComboBox" name="comboBox_3"/>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_5">
-                  <property name="text">
-                   <string>PushButton</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_4">
-                  <property name="text">
-                   <string>PushButton</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QTreeView" name="treeView"/>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="widget_4" native="true">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="QPushButton" name="pushButton_5">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_4">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBox_3"/>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTreeView" name="treeView">
+                 <property name="styleSheet">
+                  <string notr="true">border:2px solid black;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
             </layout>
            </widget>
            <widget class="QWidget" name="widget_5" native="true">
             <property name="styleSheet">
-             <string notr="true">border: 1px solid green</string>
+             <string notr="true">border: 2px solid black;
+</string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QSplitter" name="splitter">
+               <property name="styleSheet">
+                <string notr="true">border:none;</string>
+               </property>
                <property name="orientation">
                 <enum>Qt::Orientation::Vertical</enum>
                </property>
                <widget class="QTabWidget" name="tabWidget">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="styleSheet">
-                 <string notr="true">border: 1px solid black</string>
+                 <string notr="true">/* --- QTabWidget Frame --- */
+QTabWidget::pane {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+/* --- TabBar Area --- */
+QTabBar::tab {
+    background: #f4f4f4;
+    color: #333;
+    padding: 6px 16px;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 2px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+}
+
+QTabBar::tab:hover {
+    background: #e4ecf5;
+    border: 1px solid #a6c0e0;
+}
+
+QTabBar::tab:selected {
+    background: #ffffff;
+    border: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Optional: Remove tab content border if needed */
+QTabWidget {
+    border: none;
+}
+</string>
                 </property>
                 <property name="tabShape">
-                 <enum>QTabWidget::TabShape::Triangular</enum>
+                 <enum>QTabWidget::TabShape::Rounded</enum>
+                </property>
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <property name="elideMode">
+                 <enum>Qt::TextElideMode::ElideNone</enum>
                 </property>
                 <property name="documentMode">
                  <bool>true</bool>
@@ -216,13 +459,58 @@
                 </widget>
                </widget>
                <widget class="QWidget" name="widget_6" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border:none;</string>
+                </property>
                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
                   <widget class="QWidget" name="widget_7" native="true">
                    <property name="styleSheet">
                     <string notr="true">border: 1px solid black</string>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
                     <item>
                      <widget class="QPushButton" name="pushButton_6">
                       <property name="text">
@@ -271,10 +559,47 @@
                  <item>
                   <widget class="QTabWidget" name="tabWidget_2">
                    <property name="styleSheet">
-                    <string notr="true"/>
+                    <string notr="true">/* --- QTabWidget Frame --- */
+QTabWidget::pane {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+/* --- TabBar Area --- */
+QTabBar::tab {
+    background: #f4f4f4;
+    color: #333;
+    padding: 6px 16px;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 2px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+}
+
+QTabBar::tab:hover {
+    background: #e4ecf5;
+    border: 1px solid #a6c0e0;
+}
+
+QTabBar::tab:selected {
+    background: #ffffff;
+    border: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Optional: Remove tab content border if needed */
+QTabWidget {
+    border: none;
+}
+</string>
                    </property>
                    <property name="tabShape">
-                    <enum>QTabWidget::TabShape::Triangular</enum>
+                    <enum>QTabWidget::TabShape::Rounded</enum>
                    </property>
                    <property name="documentMode">
                     <bool>true</bool>
@@ -308,7 +633,8 @@
            </widget>
            <widget class="QTableView" name="tableView">
             <property name="styleSheet">
-             <string notr="true">border: 1px solid blue</string>
+             <string notr="true">border: 1.75px solid black
+</string>
             </property>
            </widget>
           </widget>
@@ -325,44 +651,161 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1112</width>
-     <height>26</height>
+     <width>1378</width>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="actionNew_Text_File"/>
+     <addaction name="actionNew_File"/>
+     <addaction name="actionNew_Package"/>
+    </widget>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="actionOpen_File"/>
+     <addaction name="actionOpen_Folder"/>
+    </widget>
+    <addaction name="menuNew"/>
+    <addaction name="separator"/>
+    <addaction name="menuOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_History"/>
+    <addaction name="separator"/>
+    <addaction name="actionSetting"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose_Projects"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_All"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>Edit</string>
     </property>
+    <addaction name="actionUndo"/>
+    <addaction name="separator"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="separator"/>
+    <addaction name="actionPaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_All"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
      <string>View</string>
     </property>
+    <widget class="QMenu" name="menuAppearances">
+     <property name="title">
+      <string>Appearances</string>
+     </property>
+     <addaction name="actionFull_Screen"/>
+     <addaction name="separator"/>
+     <addaction name="actionZen_Mode"/>
+     <addaction name="separator"/>
+     <addaction name="actionToggle_Menubar"/>
+     <addaction name="separator"/>
+     <addaction name="actionPrimary_SideBar"/>
+     <addaction name="separator"/>
+     <addaction name="actionSecond_Sidebar"/>
+     <addaction name="separator"/>
+     <addaction name="actionStatus_Bar"/>
+     <addaction name="separator"/>
+     <addaction name="actionZoom_In"/>
+     <addaction name="separator"/>
+     <addaction name="actionZoom_Out"/>
+     <addaction name="separator"/>
+     <addaction name="actionReset_Zoom"/>
+    </widget>
+    <addaction name="menuAppearances"/>
+    <addaction name="separator"/>
+    <addaction name="actionFile_Explorer"/>
+    <addaction name="separator"/>
+    <addaction name="actionProblems"/>
+    <addaction name="separator"/>
+    <addaction name="actionTerminal"/>
+    <addaction name="separator"/>
+    <addaction name="actionWord_Wrap"/>
+    <addaction name="separator"/>
+    <addaction name="actionSymbol_Table"/>
    </widget>
    <widget class="QMenu" name="menuRefractor">
     <property name="title">
      <string>Refractor</string>
     </property>
+    <addaction name="actionRename_Symbols"/>
+    <addaction name="separator"/>
+    <addaction name="actionRename_Filename"/>
+    <addaction name="separator"/>
+    <addaction name="actionChange_All_Occurances"/>
    </widget>
    <widget class="QMenu" name="menuRun">
     <property name="title">
      <string>Run</string>
     </property>
+    <addaction name="actionRun_Without_Debugging"/>
+    <addaction name="separator"/>
+    <addaction name="actionCompilation"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_Terminal"/>
+    <addaction name="separator"/>
+    <addaction name="actionStart_Debugging"/>
+    <addaction name="separator"/>
+    <addaction name="actionStop_Debugging"/>
    </widget>
    <widget class="QMenu" name="menuProjects">
     <property name="title">
      <string>Projects</string>
     </property>
+    <addaction name="actionNew_Projects"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_Projects"/>
+    <addaction name="separator"/>
+    <addaction name="actionProject_Form_Existing_Sources"/>
+    <addaction name="separator"/>
+    <addaction name="actionRecent_Projects"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose_Projects_2"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
      <string>Window</string>
     </property>
+    <widget class="QMenu" name="menuEditor_Tabs">
+     <property name="title">
+      <string>Editor Tabs</string>
+     </property>
+     <addaction name="actionClose_Tab"/>
+     <addaction name="actionClose_Other_Tabs"/>
+     <addaction name="actionClose_All_Tabs"/>
+     <addaction name="actionClose_Tabs_To_The_Left"/>
+     <addaction name="actionClose_Tabs_To_The_Right"/>
+     <addaction name="actionLock_Tab"/>
+    </widget>
+    <widget class="QMenu" name="menuActive_Tool_Window">
+     <property name="title">
+      <string>Active Tool Window</string>
+     </property>
+     <addaction name="actionHide_Active_Tool_Window"/>
+     <addaction name="actionFide_Side_Tool_Window"/>
+     <addaction name="actionHide_All_Window"/>
+    </widget>
+    <addaction name="menuEditor_Tabs"/>
+    <addaction name="separator"/>
+    <addaction name="menuActive_Tool_Window"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -372,6 +815,7 @@
    <addaction name="menuProjects"/>
    <addaction name="menuWindow"/>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
@@ -382,9 +826,367 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionFile_Explorer"/>
+   <addaction name="actionRun_Without_Debugging"/>
+   <addaction name="actionTerminal"/>
+   <addaction name="actionSymbol_Table"/>
+   <addaction name="actionExit"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionShow_History">
+   <property name="text">
+    <string>Show History</string>
+   </property>
+   <property name="shortcut">
+    <string>Meta+Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="text">
+    <string>Setting</string>
+   </property>
+  </action>
+  <action name="actionClose_Projects">
+   <property name="text">
+    <string>Close Projects</string>
+   </property>
+  </action>
+  <action name="actionSave_All">
+   <property name="text">
+    <string>Save All</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/cross.png</normaloff>:/cross.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionNew_Text_File">
+   <property name="text">
+    <string>New Text File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionNew_File">
+   <property name="text">
+    <string>New File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionNew_Package">
+   <property name="text">
+    <string>New Package</string>
+   </property>
+  </action>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionOpen_Folder">
+   <property name="text">
+    <string>Open Folder</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K, Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionSelect_All">
+   <property name="text">
+    <string>Select All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionFile_Explorer">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/file-explorer.png</normaloff>:/file-explorer.png</iconset>
+   </property>
+   <property name="text">
+    <string>File Explorer</string>
+   </property>
+  </action>
+  <action name="actionProblems">
+   <property name="text">
+    <string>Problems</string>
+   </property>
+  </action>
+  <action name="actionTerminal">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/terminal.png</normaloff>:/terminal.png</iconset>
+   </property>
+   <property name="text">
+    <string>Terminal</string>
+   </property>
+  </action>
+  <action name="actionWord_Wrap">
+   <property name="text">
+    <string>Word Wrap</string>
+   </property>
+  </action>
+  <action name="actionSymbol_Table">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/frequency.png</normaloff>:/frequency.png</iconset>
+   </property>
+   <property name="text">
+    <string>Symbol Table</string>
+   </property>
+  </action>
+  <action name="actionFull_Screen">
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionZen_Mode">
+   <property name="text">
+    <string>Zen Mode</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K, Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionToggle_Menubar">
+   <property name="text">
+    <string>Toggle Menubar</string>
+   </property>
+  </action>
+  <action name="actionPrimary_SideBar">
+   <property name="text">
+    <string>Primary SideBar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionSecond_Sidebar">
+   <property name="text">
+    <string>Second Sidebar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+B</string>
+   </property>
+  </action>
+  <action name="actionStatus_Bar">
+   <property name="text">
+    <string>Status Bar</string>
+   </property>
+  </action>
+  <action name="actionZoom_In">
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionReset_Zoom">
+   <property name="text">
+    <string>Reset Zoom</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+0</string>
+   </property>
+  </action>
+  <action name="actionRename_Symbols">
+   <property name="text">
+    <string>Rename Symbols</string>
+   </property>
+  </action>
+  <action name="actionRename_Filename">
+   <property name="text">
+    <string>Rename Filename</string>
+   </property>
+  </action>
+  <action name="actionChange_All_Occurances">
+   <property name="text">
+    <string>Change All Occurances</string>
+   </property>
+  </action>
+  <action name="actionRun_Without_Debugging">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/play-button.png</normaloff>:/play-button.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run Without Debugging</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F5</string>
+   </property>
+  </action>
+  <action name="actionCompilation">
+   <property name="text">
+    <string>Compilation</string>
+   </property>
+  </action>
+  <action name="actionOpen_Terminal">
+   <property name="icon">
+    <iconset>
+     <normalon>:/terminal.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Open Terminal</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+`</string>
+   </property>
+  </action>
+  <action name="actionStart_Debugging">
+   <property name="text">
+    <string>Start Debugging</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionStop_Debugging">
+   <property name="text">
+    <string>Stop Debugging</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F5</string>
+   </property>
+  </action>
+  <action name="actionNew_Projects">
+   <property name="text">
+    <string>New Projects</string>
+   </property>
+  </action>
+  <action name="actionOpen_Projects">
+   <property name="text">
+    <string>Open Projects</string>
+   </property>
+  </action>
+  <action name="actionProject_Form_Existing_Sources">
+   <property name="text">
+    <string>Project Form Existing Sources</string>
+   </property>
+  </action>
+  <action name="actionRecent_Projects">
+   <property name="text">
+    <string>Recent Projects</string>
+   </property>
+  </action>
+  <action name="actionClose_Projects_2">
+   <property name="text">
+    <string>Close Projects</string>
+   </property>
+  </action>
+  <action name="actionClose_Tab">
+   <property name="text">
+    <string>Close Tab</string>
+   </property>
+  </action>
+  <action name="actionClose_Other_Tabs">
+   <property name="text">
+    <string>Close Other Tabs</string>
+   </property>
+  </action>
+  <action name="actionClose_All_Tabs">
+   <property name="text">
+    <string>Close All Tabs</string>
+   </property>
+  </action>
+  <action name="actionClose_Tabs_To_The_Left">
+   <property name="text">
+    <string>Close Tabs To The Left</string>
+   </property>
+  </action>
+  <action name="actionClose_Tabs_To_The_Right">
+   <property name="text">
+    <string>Close Tabs To The Right</string>
+   </property>
+  </action>
+  <action name="actionLock_Tab">
+   <property name="text">
+    <string>Lock Tab</string>
+   </property>
+  </action>
+  <action name="actionHide_Active_Tool_Window">
+   <property name="text">
+    <string>Hide Active Tool Window</string>
+   </property>
+  </action>
+  <action name="actionFide_Side_Tool_Window">
+   <property name="text">
+    <string>Fide Side Tool Window</string>
+   </property>
+  </action>
+  <action name="actionHide_All_Window">
+   <property name="text">
+    <string>Hide All Window</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

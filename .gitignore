@@ -1,0 +1,37 @@
+# Ignore Qt build folders
+build-*/
+build/
+
+# Ignore Qt Creator user-specific files
+*.user
+*.user.*
+*.pro.user
+*.pro.user.*
+*.autosave
+
+# Ignore Qt Creator project settings
+.qmake.stash
+CMakeLists.txt.user
+*.creator*
+*.creator
+
+# Object and compiled files
+*.o
+*.obj
+*.dll
+*.exe
+*.so
+*.dylib
+*.a
+
+# Make/CMake files
+Makefile
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Misc
+*.log
+*.tmp
+*.swp
+.DS_Store

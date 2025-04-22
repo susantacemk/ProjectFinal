@@ -19,6 +19,10 @@ MainWindow::MainWindow(QWidget *parent)
         dateTimeLabel->setText(dateTimeString);
     });
     timer->start(1000);  // Update every 1 second (1000 ms)
+
+    ui->tableView->setVisible(false);
+    ui->widget_3->setMinimumWidth(200);
+    ui->widget_3->setMaximumWidth(350);
 }
 
 MainWindow::~MainWindow()

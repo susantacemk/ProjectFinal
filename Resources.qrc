@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>file-explorer.png</file>
+        <file>cross.png</file>
+        <file>debugging.png</file>
+        <file>frequency.png</file>
+        <file>play-button.png</file>
+        <file>search file.png</file>
+        <file>terminal.png</file>
+    </qresource>
+</RCC>
