@@ -7,5 +7,12 @@
         <file>play-button.png</file>
         <file>search file.png</file>
         <file>terminal.png</file>
+        <file>eye-crossed.png</file>
+        <file>menu-dots-vertical.png</file>
+        <file>minimze.png</file>
+        <file>trash.png</file>
+        <file>menu-burger.png</file>
+        <file>compress.png</file>
+        <file>angle-down.png</file>
     </qresource>
 </RCC>

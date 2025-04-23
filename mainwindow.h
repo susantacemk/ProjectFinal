@@ -17,6 +17,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_editor_tab_tabCloseRequested(int index);
+
+    void on_terminal_tab_tabCloseRequested(int index);
+
+    void on_actionSymbol_Table_triggered();
+
+    void on_actionFile_Explorer_triggered();
+
+    void on_actionTerminal_triggered();
+
+    void customizeUi();
+
 private:
     Ui::MainWindow *ui;
 };
