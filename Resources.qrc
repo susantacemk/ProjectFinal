@@ -14,5 +14,6 @@
         <file>menu-burger.png</file>
         <file>compress.png</file>
         <file>angle-down.png</file>
+        <file>document-editor.png</file>
     </qresource>
 </RCC>

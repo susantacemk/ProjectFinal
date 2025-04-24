@@ -28,7 +28,8 @@ private slots:
 
     void on_actionTerminal_triggered();
 
-    void customizeUi();
+    void customizeUi(); // set up ui combobox
+    void setUpEditorPanel(); // set up editor panel
 
 private:
     Ui::MainWindow *ui;

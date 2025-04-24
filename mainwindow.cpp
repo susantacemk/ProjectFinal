@@ -5,28 +5,23 @@
 #include <QTimer>
 #include<QStandardItemModel>
 #include<QStandardItem>
+#include <codeeditor.h>
+#include<chighlighter.h>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     // Assuming `this` is a QMainWindow
-    QLabel *dateTimeLabel = new QLabel(this);  // Create a QLabel to display date and time
-    ui->statusBar->addPermanentWidget(dateTimeLabel);  // Add it to the status bar
-
-    // Create a timer to update the date and time every second
-    QTimer *timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, [=]() {
-        QString dateTimeString = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
-        dateTimeLabel->setText(dateTimeString);
-    });
-    timer->start(1000);  // Update every 1 second (1000 ms)
 
     ui->symbol_table->setVisible(false);
+    // intially all tab are clear
+    ui->editor_tab->clear();
+    ui->terminal_tab->clear();
 
     // method call
     customizeUi();
-
+    setUpEditorPanel();
 }
 
 MainWindow::~MainWindow()
@@ -98,5 +93,16 @@ void MainWindow::customizeUi(){
     model2FirstItem->setFont(QFont("Segoe UI", 9, QFont::Normal, true)); // Italic
 
 
+}
+
+
+// setup method of code editor section
+
+void  MainWindow:: setUpEditorPanel(){
+    // initially all tab are removed
+    CodeEditor *editor = new CodeEditor(this);
+    int tabIndex = ui->editor_tab->addTab(editor, "Untitled");
+    ui->editor_tab->setCurrentIndex(tabIndex);
+    CHighlighter *highlighter = new CHighlighter(editor->document());
 }
 
