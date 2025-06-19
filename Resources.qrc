@@ -15,5 +15,20 @@
         <file>compress.png</file>
         <file>angle-down.png</file>
         <file>document-editor.png</file>
+        <file>main_page_bg.jpg</file>
+        <file>c.png</file>
+        <file>c++.png</file>
+        <file>python.png</file>
+        <file>txt.png</file>
+        <file>mainIcon.jpg</file>
+        <file>clean-code.png</file>
+        <file>main-Icon.jpg</file>
+        <file>issue.png</file>
+        <file>new-project.png</file>
+        <file>compile.png</file>
+        <file>play.png</file>
+        <file>wrap.png</file>
+        <file>play_red.png</file>
+        <file>mainIcon.png</file>
     </qresource>
 </RCC>

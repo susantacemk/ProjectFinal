@@ -57,21 +57,6 @@ CHighlighter::CHighlighter(QTextDocument *parent) : QSyntaxHighlighter(parent) {
     rule.format = symbolFormat;
     rules.append(rule);
 
-    // Single-line comments
-    commentFormat.setForeground(Qt::darkGreen);
-    commentFormat.setFontWeight(QFont::Bold);
-    commentFormat.setFontItalic(true);
-    rule.pattern = QRegularExpression("//[^\n]*");
-    rule.format = commentFormat;
-    rules.append(rule);
-
-    // Multi-line comments
-    commentFormat.setForeground(Qt::darkGreen);
-    commentFormat.setFontWeight(QFont::Bold);
-    commentFormat.setFontItalic(true);
-    multiLineCommentStart = QRegularExpression("/\\*");
-    multiLineCommentEnd = QRegularExpression("\\*/");
-
     // function handeling
 
     functionFormat.setForeground(QColor(247, 235, 5));
@@ -96,6 +81,22 @@ CHighlighter::CHighlighter(QTextDocument *parent) : QSyntaxHighlighter(parent) {
     fmtRule.pattern = QRegularExpression(R"(%[-+0 #]*\d*(\.\d+)?[hlL]?[cdieEfgGosuxXpn%])");
     fmtRule.format = formatSpec;
     rules.append(fmtRule);
+
+    // Single-line comments
+    commentFormat.setForeground(Qt::darkGreen);
+    commentFormat.setFontWeight(QFont::Bold);
+    commentFormat.setFontItalic(true);
+    rule.pattern = QRegularExpression("//[^\n]*");
+    rule.format = commentFormat;
+    rules.append(rule);
+
+    // Multi-line comments
+    commentFormat.setForeground(Qt::darkGreen);
+    commentFormat.setFontWeight(QFont::Bold);
+    commentFormat.setFontItalic(true);
+    multiLineCommentStart = QRegularExpression("/\\*");
+    multiLineCommentEnd = QRegularExpression("\\*/");
+
 
 
 }
